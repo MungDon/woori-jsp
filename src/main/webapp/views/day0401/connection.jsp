@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
-<h1>connection</h1>
 <%
 	//1단계 import
 	//2단계 JDBC 드라이버 로딩
@@ -33,7 +32,7 @@
 		String ename = rs.getString("ename");
 		Timestamp hiredate = rs.getTimestamp("hiredate");
 		
-		out.println("<h2>"+empno+" : "+ename+" : "+hiredate+"</h2>");
+		out.println("<h2> 사원번호 : "+empno+", 사원명 : "+ename+", 입사일자 : "+hiredate+"</h2>");
 	}
 	//6단계 연결 끊기 / 연결해서 이루어지는 경우 반드시 연결을 끊어줘야한다.
 	conn.close();
