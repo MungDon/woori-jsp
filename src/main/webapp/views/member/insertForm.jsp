@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 <h1>InsertForm</h1>
 <form action="insertPro.jsp"method="post">
-	아이디 : <input type="text" name="id"/><br/>
+	아이디 : <input type="text" name="id" id="id"/><br/>
+			<input type="button" value="중복확인" onclick="idCheck()"/>
+			<div id="idResult"></div>
 	비밀번호 : <input type="password" name="pw"/><br/>
 	이름 : <input type="text" name="name"/><br/>
 	생일 : <input type="date" name="birth"/><br/>
@@ -20,3 +22,9 @@
 	<br/>
 	<input type="submit" value="회원가입"/>
 </form>
+<script>
+	function idCheck(){
+		var id = document.getElementById("id").value;
+		open("confirmId.jsp?id="+id, 'confirm', 'width=400,height=400');
+	}
+</script>

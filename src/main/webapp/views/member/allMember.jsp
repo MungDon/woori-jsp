@@ -5,6 +5,7 @@
 <h1>allMember</h1>
 <jsp:useBean id="dao" class="web.test.bean.MemberDAO"/>
 <%
+	String sid = (String)session.getAttribute("sid");
 	List<MemberDTO> list = dao.allMember();
 	for(MemberDTO dto : list){%>
 		<h2><%=dto.getId()%>/
