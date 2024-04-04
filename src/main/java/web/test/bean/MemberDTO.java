@@ -19,6 +19,8 @@ public class MemberDTO {
 	private String gender;	// 성별
 
 	private Timestamp reg;// 가입일자
+	
+	private String auto;		// 자동 로그인
 
 	// setter()//
 	public void setId(String id) {
@@ -52,6 +54,10 @@ public class MemberDTO {
 	public void setReg(Timestamp reg) {
 		this.reg = reg;
 	}
+	
+	public void setAuto(String auto) {
+		this.auto = auto;
+	}
 
 	// getter()//
 	public String getId() {
@@ -84,5 +90,9 @@ public class MemberDTO {
 
 	public Timestamp getReg() {
 		return reg;
+	}
+	
+	public String getAuto() {
+		return auto;
 	}
 }

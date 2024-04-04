@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<h1>cookie/logout</h1>
+<%
+	//쿠키삭제
+	Cookie[] cookies = request.getCookies();
+	
+		for(Cookie c : cookies){
+			if(c.getName().equals("cid")||c.getName().equals("cpw")||c.getName().equals("cauto")){
+				c.setMaxAge(0);
+				response.addCookie(c);
+			}			
+		}		
+	//세션삭제
+	session.invalidate();
+	response.sendRedirect("main.jsp");
+	
+%>

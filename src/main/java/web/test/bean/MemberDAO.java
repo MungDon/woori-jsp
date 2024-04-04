@@ -177,7 +177,7 @@ public class MemberDAO { // Data Access Object
 
 			pstmt.setString(1, dto.getId());
 			pstmt.setString(2, dto.getPw());
-
+			
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
